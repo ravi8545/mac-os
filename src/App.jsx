@@ -2,6 +2,8 @@ import React from 'react'
 import './app.scss'
 import Doc from './components/Dock'
 import Nav from './components/Nav'
+import MacWindows from './components/windows/MacWindows.jsx'
+import Github from './components/windows/Github.jsx'
 
 
 
@@ -9,8 +11,9 @@ import Nav from './components/Nav'
 const App = () => {
   return (
     <main>
-      <Doc/>
-      <Nav/>
+      <Doc />
+      <Nav />
+      <Github />
     </main>
   )
 }
