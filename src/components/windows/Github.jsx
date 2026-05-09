@@ -42,7 +42,7 @@ const Github = () => {
         <MacWindows>
 
             <div className="cards">
-                {githubData.map(project => {
+                {githubData.map((project) => {
                     return <GitCard data={project}/>
                 })}
             </div>
