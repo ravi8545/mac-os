@@ -1,17 +1,27 @@
 import React from 'react'
 import './dock.scss'
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs'
+import Spotify from './windows/Spotify'
 
-const Dock = () => {
+const Dock = ({ windowsState, setWindowsState }) => {
     return (
         <footer className='dock'>
-            <div className="icon github"><img src="/doc-icons/github.svg" alt="" /></div>
-            <div className="icon note"><img src="/doc-icons/note.svg" alt="" /></div>
-            <div className="icon pdf"><img src="/doc-icons/pdf.svg" alt="" /></div>
-            <div className="icon calender"><img src="/doc-icons/calender.svg" alt="" /></div>
-            <div className="icon spotify"><img src="/doc-icons/spotify.svg" alt="" /></div>
-            <div className="icon mail"><img src="/doc-icons/mail.svg" alt="" /></div>
-            <div className="icon link"><img src="/doc-icons/mail.svg" alt="" /></div>
-            <div className="icon cli"><img src="/doc-icons/cli.svg" alt="" /></div>
+            <div onClick={() => { setWindowsState(state => ({ ...state, github: true })) }}
+                className="icon github"><img src="/doc-icons/github.svg" alt="" /></div>
+            <div onClick={() => { setWindowsState(state => ({ ...state, note: true })) }}
+             className="icon note"><img src="/doc-icons/note.svg" alt="" /></div>
+            <div onClick={() => { setWindowsState(state => ({ ...state, pdf: true })) }}
+             className="icon pdf"><img src="/doc-icons/pdf.svg" alt="" /></div>
+            <div onClick={()=>{window.open("https://calendar.google.com/calendar/u/0/r")}}
+              className="icon calender"><img src="/doc-icons/calender.svg" alt="" /></div>
+            <div onClick={() => { setWindowsState(state => ({ ...state, spotify: true })) }}
+             className="icon spotify"><img src="/doc-icons/spotify.svg" alt="" /></div>
+            <div onClick={()=>{window.open("https://mail.google.com/mail/u/0/#inbox")}} 
+             className="icon mail"><img src="/doc-icons/mail.svg" alt="" /></div>
+            <div onClick={()=>{window.open("https://www.linkedin.com/in/ravi-prajapati-a9a400264?utm_source=share_via&utm_content=profile&utm_medium=member_android", "_blank")}}
+             className="icon link"><img src="/doc-icons/link.svg" alt="" /></div>
+            <div onClick={() => { setWindowsState(state => ({ ...state, cli: true })) }}
+             className="icon cli"><img src="/doc-icons/cli.svg" alt="" /></div>
         </footer>
     )
 }

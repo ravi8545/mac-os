@@ -1,0 +1,24 @@
+.cli-window {
+  width: 700px;
+  height: 400px;
+  max-width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.react-terminal-header {
+  display: none !important;
+}
+
+.react-terminal {
+  padding-top: 0 !important;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+  background: #000;
+  color: #00ff88;
+}
+
+.index_controls__sXDjs{
+    display: none;
+}
